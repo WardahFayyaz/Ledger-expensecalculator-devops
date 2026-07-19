@@ -1,58 +1,100 @@
 .expense-item {
-  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  padding: 0.7rem 1rem;
-  margin: 1rem;
-  border-radius: 6px;
-  background-color: #e2e2e2;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg-base);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
-.expense-item__description {
+.expense-item:hover {
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.expense-item__body {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  align-items: flex-end;
-  flex-flow: column-reverse;
-  justify-content: flex-start;
-  flex: 1;
+  gap: 0.55rem;
 }
 
-.expense-item h2 {
-  color: #121212;
+.expense-item__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.expense-item__title {
+  margin: 0;
   font-size: 1rem;
-  flex: 1;
-  margin: 0 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.expense-item__tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.expense-item__category {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--cat-color);
+  background: color-mix(in srgb, var(--cat-color) 14%, transparent);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+.expense-item__notes {
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 14rem;
+}
+
+.expense-item__aside {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
 }
 
 .expense-item__price {
-  position: sticky;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  background-color: #121212;
-  border: 1px solid white;
-  padding: 0.5rem;
-  border-radius: 5px;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
 }
 
-@media (min-width: 320px) {
-  .expense-item__description {
+.expense-item__actions {
+  display: flex;
+  gap: 0.15rem;
+}
+
+@media (min-width: 520px) {
+  .expense-item__body {
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    flex: 1;
+    justify-content: space-between;
   }
 
-  .expense-item__description h2 {
-    font-size: 1rem;
-  }
-
-  .expense-item__price {
-    position: sticky;
-    font-size: 1rem;
-    padding: 0.4rem;
+  .expense-item__aside {
+    flex-shrink: 0;
   }
 }

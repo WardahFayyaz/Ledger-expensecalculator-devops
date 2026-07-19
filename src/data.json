@@ -1,26 +1,44 @@
 [
-    {
-        "id": "eid1",
-        "date": "2020-10-05",
-        "title": "BIKE EMI",
-        "amount": 522.45
-    },
-    {
-        "id": "eid2",
-        "date": "2021-05-08",
-        "title": "TV",
-        "amount": 724.88
-    },
-    {
-        "id": "eid3",
-        "date": "2021-12-10",
-        "title": "PHONE",
-        "amount": 122.50
-    },
-    {
-        "id": "eid4",
-        "date": "2020-12-24",
-        "title": "B-DAY PARTY",
-        "amount": 300
-    }
+  {
+    "id": "eid1",
+    "date": "2024-10-05",
+    "title": "Bike EMI",
+    "amount": 522.45,
+    "category": "bills"
+  },
+  {
+    "id": "eid2",
+    "date": "2025-05-08",
+    "title": "New TV",
+    "amount": 724.88,
+    "category": "shopping"
+  },
+  {
+    "id": "eid3",
+    "date": "2025-12-10",
+    "title": "Phone case",
+    "amount": 42.5,
+    "category": "shopping"
+  },
+  {
+    "id": "eid4",
+    "date": "2024-12-24",
+    "title": "Birthday dinner",
+    "amount": 300,
+    "category": "food"
+  },
+  {
+    "id": "eid5",
+    "date": "2026-03-12",
+    "title": "Uber rides",
+    "amount": 68.2,
+    "category": "transport"
+  },
+  {
+    "id": "eid6",
+    "date": "2026-07-02",
+    "title": "Concert tickets",
+    "amount": 150,
+    "category": "entertainment"
+  }
 ]

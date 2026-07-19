@@ -1,42 +1,44 @@
 .expense-date {
-    display: flex;
-    flex-direction: column;
-    width: 4.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0.35rem;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: #fff;
+  line-height: 1.15;
+}
+
+.expense-date__day {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.expense-date__month {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.expense-date__year {
+  font-size: 0.6rem;
+  opacity: 0.75;
+}
+
+@media (min-width: 520px) {
+  .expense-date {
+    width: 4rem;
     height: 4rem;
-    border: 1px solid #ececec;
-    border-radius: 6px;
-    background-color: #2a2a2a;
-    color: white;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .expense-date__month {
-    font-size: 0.85rem;
-    font-weight: bold;
-  }
-  
-  .expense-date__year {
-    font-size: 0.75rem;
-  }
-  
-  .expense-date__day {
-    font-size: 1rem;
-    font-weight: bold;
   }
 
-  @media (min-width:320px) {
-    .expense-date {
-      display: flex;
-      flex-direction: column;
-      width: 4rem;
-      height: 3rem;
-      border: 1px solid #ececec;
-      background-color: #2a2a2a;
-      color: white;
-      border-radius: 6px;
-      align-items: center;
-      justify-content: center;
-      padding: .25rem;
-    }
+  .expense-date__day {
+    font-size: 1.3rem;
   }
+}
